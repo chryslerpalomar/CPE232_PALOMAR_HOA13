@@ -1,0 +1,20 @@
+  - name: install chrony
+    shell:
+      sudo apt install chrony
+
+  - name: add ip address as server to /etc/chrony.conf
+    lineinfile:
+      path: /etc/chrony/chrony.conf
+      line: 'server 192.168.56.109 iburst'
+      insertafter: '^#.*allow.*$'
+
+  - name: add allow line to /etc/chrony.conf
+    lineinfile:
+      path: /etc/chrony/chrony.conf
+      line: 'allow 192.168.56.1/24'
+      insertafter: '^#.*allow.*$'
+
+  - name: restart chrony service
+    service:
+      name: chrony
+      state: restarted
