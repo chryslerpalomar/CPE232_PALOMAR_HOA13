@@ -1,6 +1,6 @@
   - name: install the package
     shell:
-      sudo apt install rabbitmq-server
+      sudo apt install rabbitmq-server -y
 
   - name: add the openstack user
     shell:

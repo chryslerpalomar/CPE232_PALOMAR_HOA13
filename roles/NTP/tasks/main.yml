@@ -1,6 +1,6 @@
   - name: install chrony
     shell:
-      sudo apt install chrony
+      sudo apt install chrony -y
 
   - name: add ip address as server to /etc/chrony.conf
     lineinfile:

@@ -14,7 +14,3 @@
     service:
       name: mysql
       state: restarted
-
-  - name: runs the mysql_secure_installation
-    shell:
-      sudo /usr/bin/mysql_secure_installation

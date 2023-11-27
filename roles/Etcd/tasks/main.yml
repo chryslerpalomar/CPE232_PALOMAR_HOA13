@@ -1,6 +1,6 @@
   - name: install the etcd package
     shell:
-      sudo apt install etcd
+      sudo apt install etcd -y
 
   - name: copy etcd conf template
     template:
